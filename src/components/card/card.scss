@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+.card-wrapper {
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0 8px 6px -9px #080808;
+
+  .card-inner-wrapper {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: ease-in 0.16s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .card-character-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .card-character-name-wrapper {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-character-name {
+    color: #080808;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+
+    backface-visibility: hidden;
+  }
+}

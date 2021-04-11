@@ -1,0 +1,73 @@
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .biography-wrapper {
+    margin: 10px 0px;
+    height: 300px;
+    width: 58%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .biography-image-wrapper {
+    min-width: 280px;
+    max-width: 280px;
+    height: 300px;
+  }
+
+  .biography-image {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 5px;
+  }
+
+  .character-description {
+    height: 100%;
+    max-width: 300px;
+    min-width: 300px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .series-wrapper {
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .series-item-wrapper {
+    margin: 10px;
+  }
+
+  .font-style {
+    color: #080808;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16px;
+  }
+
+  .character-edition {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 260px;
+  }
+
+  .text-area {
+    resize: none;
+    width: 100%;
+  }
+
+  .pagination-wrappper {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+}

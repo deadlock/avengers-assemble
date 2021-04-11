@@ -1,0 +1,35 @@
+image: node:14
+
+stages:
+  - pre-build
+  - build
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: pre-build
+  script:
+    - npm install --only=production
+  artifacts:
+    paths:
+      - node_modules/
+
+compile:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build
+
+testing:
+  stage: test
+  script: npm test
+
+deployment:
+  stage: deploy
+  script: echo "Deploying"

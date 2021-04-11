@@ -1,0 +1,180 @@
+ul,
+li {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-wrapper {
+  display: flex;
+}
+
+.previous-button {
+  align-items: center;
+  background: white;
+  border: 1px solid blue;
+  border-radius: 0;
+  border-bottom-left-radius: 4px;
+  border-right: 0;
+  border-top-left-radius: 4px;
+  box-shadow: none;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 24px;
+
+  &:disabled {
+    background: transparent;
+    box-shadow: none;
+    cursor: default;
+  }
+
+  &:hover svg {
+    fill: gray;
+  }
+
+  &:disabled svg {
+    background: transparent;
+    box-shadow: none;
+    fill: gray;
+    transition: 0.2s;
+  }
+}
+
+.previous-icon {
+  fill: blue;
+  height: 9px;
+  transform: rotate(180deg);
+  width: 9px;
+}
+
+.next-button {
+  align-items: center;
+  background: white;
+  border: 1px solid blue;
+  border-left: 0;
+  border-radius: 0;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: none;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  position: relative;
+  width: 24px;
+
+  &:disabled {
+    background: transparent;
+    box-shadow: none;
+    cursor: default;
+  }
+
+  &:hover svg {
+    fill: gray;
+  }
+
+  &:disabled svg {
+    background: transparent;
+    fill: gray;
+    transition: 0.2s;
+  }
+
+  &::after {
+    background: gray;
+    content: "";
+    height: 23px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+    width: 1px;
+  }
+}
+
+.next-icon {
+  fill: blue;
+  height: 9px;
+  width: 9px;
+}
+
+.pagination-text-button {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: blue;
+  font-family: "EncodeSans-medium", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  height: auto;
+  margin: 0 8px;
+  padding: 0;
+  text-decoration: underline;
+  width: auto;
+
+  &:disabled {
+    background: transparent;
+    box-shadow: none;
+    color: gray;
+    cursor: default;
+    transition: 0.2s;
+  }
+
+  &:hover {
+    color: gray;
+    transition: 0.2s;
+  }
+
+  &:disabled:hover {
+    color: gray;
+  }
+}
+
+.pagination-number-button {
+  align-items: center;
+  background: white;
+  border: 1px solid blue;
+  border-left: 0;
+  border-radius: 0;
+  border-right: 0;
+  box-shadow: none;
+  color: blue;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  min-width: 42px;
+  padding: 0;
+  position: relative;
+  width: 42px;
+
+  &::before {
+    background: gray;
+    content: "";
+    height: 23px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+    width: 1px;
+  }
+}
+
+.--pagination-active {
+  background: blue;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+
+  &::before {
+    content: none;
+  }
+
+  &::after {
+    background: white;
+    content: "";
+    height: 23px;
+    position: absolute;
+    right: -1px;
+    top: 4px;
+    width: 1px;
+    z-index: 1;
+  }
+}
